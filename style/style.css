@@ -1,0 +1,33 @@
+.container {
+	font-size: 1vw;
+	border: 1px solid #ccc;
+}
+.category {
+	width: 12em;
+	height: 12em;
+	border: 1px solid #ccc;
+	margin: 1em 0;
+}
+.category:hover {
+	border: 1px solid black;
+}
+.aboutme {
+	background: url(../images/about.gif) no-repeat;
+	background-size: contain;
+	background-position: 100%;
+}
+.work {
+	background: url(../images/work.gif) no-repeat;
+	background-size: contain;
+	background-position: 100%;
+}
+.portfolio {
+	background: url(../images/portfolio.gif) no-repeat;
+	background-size: contain;
+	background-position: 60%;	
+}
+.contact {
+	background: url(../images/contact.gif) no-repeat;
+	background-size: contain;
+	background-position: 100%;	
+}
