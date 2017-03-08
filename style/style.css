@@ -1,33 +1,89 @@
 .container {
 	font-size: 1vw;
+	width: 70%;
+	height: 60em !important;
+	font-family: 'Open Sans';
+/*	background: #e8edf3;*/
+}
+
+/*HEADER*/
+.header {
+	width: 100%;
+	height: 2em;
+	text-align: right;
+	font-family: 'Josefin Slab';
+	font-size: 3em;
+	line-height: 3em;
+	letter-spacing: 2px;
+	color:#b56969;
+}
+
+/*INTRO*/
+.intro {
+	font-size: 3em;
+	width: 45%;
+	margin: 0 auto;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	color: #ccc;
+	position: relative;
+    top: 3em;
+    clear: both;
+}
+
+/*NAVIGATION*/
+.navigation {
+	position: relative;
+    top: 50%;
+    transform: translate(0,50%);
+    height: 15em;
+    width: 100%;
+}
+
+.navigation-categories {
+    margin: 0;
+    padding: 0;
+}
+.category-container {
+	width: 11em;
+	height: 11em;
+    margin: 1em 2.8em;
+    float: left;
+	list-style-type: none;
 	border: 1px solid #ccc;
+	padding: 1em;
+}
+.category-container:hover .category {
+	border-radius: 50%;
+	transition: border-radius .3s ease-in-out;
 }
 .category {
-	width: 12em;
-	height: 12em;
-	border: 1px solid #ccc;
-	margin: 1em 0;
-}
-.category:hover {
-	border: 1px solid black;
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+	border-radius: 0;
+	transition: border-radius .3s ease-in-out;
 }
 .aboutme {
-	background: url(../images/about.gif) no-repeat;
+	background: #b56969 url(../images/about.gif) no-repeat;
 	background-size: contain;
 	background-position: 100%;
 }
 .work {
-	background: url(../images/work.gif) no-repeat;
+	background: #e6cf8b url(../images/work.gif) no-repeat;
 	background-size: contain;
 	background-position: 100%;
 }
 .portfolio {
-	background: url(../images/portfolio.gif) no-repeat;
+	background: #e8edf3 url(../images/portfolio.gif) no-repeat;
 	background-size: contain;
-	background-position: 60%;	
+	background-position: 75%;
 }
 .contact {
-	background: url(../images/contact.gif) no-repeat;
+	background: #22264b url(../images/contact.gif) no-repeat;
 	background-size: contain;
 	background-position: 100%;	
 }
