@@ -11,6 +11,10 @@ class PortfolioView extends Component {
 
 	}
 
+	componentDidMount(){
+		const slider = document.getElementsByClassName('portfolio-ul');
+	}
+
 	_arrowClick(e, el){
 
 		if (e.target.id === 'left' && this.state.currentProject >=1 ) {
@@ -35,7 +39,7 @@ class PortfolioView extends Component {
 		return (
 			<section className="content portfolio-content">
 				<div className="inner-content">
-					<div id="left" className="arrow left-arrow" onClick={(e) => { this._arrowClick(e) }}></div>
+					<div id="left" className="arrow left-arrow" onClick={(e) => { this._arrowClick(e, slider) }}></div>
 					<div className="portfolio-slider">
 					<ul className="portfolio-ul">
 						<li className="portfolio-li">
@@ -90,7 +94,7 @@ class PortfolioView extends Component {
 						</li>
 					</ul>
 					</div>
-					<div id="right" className="arrow right-arrow" onClick={(e) => { this._arrowClick(e) }}></div>
+					<div id="right" className="arrow right-arrow" onClick={(e) => { this._arrowClick(e, slider) }}></div>
 
 				</div>
 			</section>
