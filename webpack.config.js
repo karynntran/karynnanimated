@@ -1,7 +1,6 @@
-// var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 module.exports = {
   entry: [
+    'whatwg-fetch',
     './src/index.js'
   ],
   output: {
@@ -25,7 +24,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      }
+      },
     ]
   },
   resolve: {
