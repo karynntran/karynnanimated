@@ -1,0 +1,141 @@
+.portfolio-slider {
+	width: 85%;
+	height: auto;
+	box-sizing: border-box;
+	overflow-x: scroll;
+	margin: 0 auto;
+}
+.arrow {
+	width: 2em;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	z-index: 10;
+}
+.left-arrow {
+	left: 0;
+	width: 0; 
+	height: 0; 
+	border-top: 1.2em solid transparent;
+	border-bottom: 1.2em solid transparent; 
+	border-right:1.2em solid $navyBlue; 
+}
+.right-arrow {
+	width: 0; 
+	height: 0; 
+	border-top: 1.2em solid transparent;
+	border-bottom: 1.2em solid transparent;
+	border-left: 1.2em solid $navyBlue;
+	right: 0; 
+}
+.portfolio-ul {
+	width: 500%;
+	height: 30em;
+	position: relative;
+	transition: left .5s ease-in-out;
+	left: 0;
+}
+
+.portfolio-li {
+    width: 20%;
+    height: 25em;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    a, a:visited {
+    	width: 100%;
+    	height: 100%;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    }
+}
+
+.portfolio-proj {
+	width: 80%;
+	height: 10em;
+	position: relative;
+	margin: 0 auto;
+	.project-name {
+		text-align: center;
+		font-size: 1.75em;
+		text-transform: lowercase;
+		letter-spacing: 1px;
+		font-family: 'Josefin Slab';
+		margin-top: 1em;
+		padding: .2em;
+		border-bottom: 2px solid #fff;
+	}
+	.project-client {
+		padding: .5em;
+		font-family: 'Quicksand';
+		text-transform: uppercase;
+		margin-bottom: 1em;
+		text-align: center;
+		font-size: 1em;
+		letter-spacing: 1px;
+	}
+	.project-img {
+		width: 100%;
+		height: 11em;
+		border: 1px solid #fff;
+	}
+	.project-description {
+		margin: 1em auto;
+		font-weight: 700;
+		font-size: 1.1em;
+	}
+	.project-notables {
+		font-style: italic;
+		text-align: justify;
+		font-size: 1em;
+	}
+	&.hennessy {
+		.project-img {
+			background: url(../images/portfolio-hennessy.png) no-repeat;
+			background-size: cover;
+			background-position: top;
+		}
+	}
+	&.cartier {
+		.project-img {
+			background: url(../images/portfolio-cartier.png) no-repeat;
+			background-size: cover;
+			background-position: top;
+		}
+	}
+	&.investools {
+		.project-img {
+			background: url(../images/portfolio-investools.png) no-repeat;
+			background-size: cover;
+			background-position: top;
+		}
+	}
+	&.kcs {
+		.project-img {
+			background: url(../images/portfolio-kcs.png) no-repeat;
+			background-size: cover;
+			background-position: top;
+		}
+	}
+	&.lolaskusina {
+		.project-img {
+			background: url(../images/portfolio-lolaskusina.png) no-repeat;
+			background-size: cover;
+			background-position: top;
+		}
+	}
+	.project-details {
+		text-align: left;
+		padding: 1.5em;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.portfolio-li {
+		height: 40em;
+	}
+}
+

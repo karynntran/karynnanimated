@@ -6,6 +6,8 @@
 	float: left;
 	top: 0;
 	z-index: 1;
+	left: 0;
+	transition: left .75s .5s ease-in-out;
 }
 
 .navigation-categories {
@@ -73,3 +75,16 @@
 // 	background-size: contain;
 // 	background-position: 100%;	
 // }
+
+
+@media all and (max-width: 767px) {
+	.navigation {
+		top: 95%;
+	}
+	.category-container {
+		height: 6em;
+	}
+	.category {
+		font-size: 2.2em;
+	}
+}

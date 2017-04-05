@@ -23,23 +23,51 @@ class App extends Component {
 		this.state = { 
 			loaded: false,
 			data: {},
-			currentView: '',
+			currentView: HelloView,
 			title: 'karynn elio tran'
 		};
 
+		this._setMainView = this._setMainView.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
+
 
 	}
 
 	componentDidMount(){
-		let mainWindow = document.getElementsByClassName('main-content')[0];
+		let mainWindow = document.getElementsByClassName('main-content')[0],
+			contentcontainer = document.getElementsByClassName('content-container')[0];
+
 		mainWindow.addEventListener('scroll', this.handleScroll);
 		this.state.loaded = true;
+
+		setTimeout(function(){
+			contentcontainer.classList.remove('animate');	
+		},200)
 	}
 
 	componentWillUnmount() {
 	    mainWindow.removeEventListener('scroll', this.handleScroll);
 	}
+
+	_setMainView(option, section){
+
+		let sections = document.querySelectorAll('section'),
+		maincontainer = document.getElementsByClassName('main-content-container')[0],
+		activeSectionOffset = sections[option].offsetTop;
+
+		maincontainer.style.top = '-' + activeSectionOffset + 'px';
+
+
+		// maincontainer.classList.remove('hello', 'work', 'portfolio', 'contact');
+		// maincontainer.classList.add(section);
+
+
+		let views = [HelloView, WorkView, PortfolioView, ContactView]
+
+		this.setState({
+			currentView: views[option]
+		})
+	};
 
 	handleScroll(e){
 		let views = [HelloView, WorkView, PortfolioView, ContactView]
@@ -47,26 +75,36 @@ class App extends Component {
 		let sections = 4,
 			containerHeight = document.getElementsByClassName('main-content-container')[0].clientHeight,
 			sectionHeight = containerHeight/sections,
-			section = document.getElementsByTagName('section');
+			section = document.querySelectorAll('section'),
+			maincontainer = document.getElementsByClassName('main-content-container')[0];
 
-		console.log(containerHeight, containerHeight/sections)
+		
+			maincontainer.style.top = 0;
+
 
 		if (this.state.loaded) {
-			let currentPos = Math.floor((e.target.scrollTop / containerHeight) * sections);
-			let activeSection = views[currentPos];
+			let currentPos = Math.floor(((e.target.scrollTop / containerHeight + .1)) * sections);
+			let activeSection = section[currentPos];
 
-			this.setState({
-				currentView: activeSection
-			})
+			if (!(activeSection.className.indexOf('active') != -1)) {
+				[].forEach.call(section, function(sect) {
+				    sect.classList.remove("active");
+				});
+				activeSection.className += " active";
+
+				this.setState({
+					currentView: views[currentPos]
+				})
+			}
 
 		}
 	}
 
 	render(){
 		return (
-			<div className="content-container">
+			<div className="content-container animate">
 				<Hero title={this.state.title} />
-				<MainView currentView={this.state.currentView}/>
+				<MainView currentView={this.state.currentView} setMainView={this._setMainView}/>
 			</div>
 		)
 	}

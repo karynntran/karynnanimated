@@ -1,5 +1,27 @@
 .hello-content {
-	// position: relative;
-	// top: 50%;
-	// transform: translateY(-50%);
+	font-size: 1.5em;
+	font-weight: 400;
+	font-family: 'Quicksand';
+	text-align: justify;
+	.inline {
+		font-size: 1.2em;
+		font-weight: 700;
+		font-family: 'Josefin Slab';
+		display: inline;
+		color: $navyBlue;
+	}
+}
+
+.hello0 {
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	font-family: 'Josefin Slab';
+
+}
+.hello1 {
+	font-size: 1em;
+}
+.hello2 {
+	margin-top: 1em;
+	font-size: 1em;;
 }

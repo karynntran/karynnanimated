@@ -6,9 +6,9 @@ const HelloView = (props) => {
 	return (
 		<section className="content hello-content">
 			<div className="inner-content">
-				<div>Hi there!</div>
-				<div>I am a native New Yorker, currently working as a web developer in Manhattan, focusing on front end technologies, UX and interactive content. In addition, I have 8 years of experience in consumer insights.</div>
-				<div>Outside of work, I like playing around with animation and video editing, crocheting big grandma square blankets, running with amazing people (the TCS NYC Marathon and the Ragnar Relay!), kickboxing and zombies.</div>
+				<div className="hello0">Hi there!</div>
+				<div className="hello1">I am a native New Yorker, currently working as a <div className="inline">web developer in Manhattan</div>, focusing on front end technologies, UX and creating interactive experiences. In addition, I have 8 years of <div className="inline">experience in consumer insights</div>.</div>
+				<div className="hello2">But wait, there&#39;s more! I like playing around with <div className="inline">animation and video editing</div>, crocheting big <div className="inline">grandma square blankets</div>, running a little bit and kind of slowly (the  <div className="inline">2016 TCS NYC Marathon</div>crew still gave me a medal), throwing a lefthooks while <div className="inline">kickboxing</div> and spending Sundays with <div className="inline">zombies</div>.</div>
 			</div>
 		</section>
 	); 
