@@ -1,6 +1,5 @@
 module.exports = {
   entry: [
-    'whatwg-fetch',
     './src/index.js'
   ],
   output: {
@@ -9,26 +8,21 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      {
-        exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015', 'stage-1']
-        }
-      },
-      {
-          test: /\.json$/,
-          loader: 'json'
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
+    loaders: [{
+      exclude: /node_modules/,
+      loader: 'babel',
+      query: {
+        presets: ['react', 'es2015', 'stage-1']
+      }
+    },
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json', '.scss']
+    extensions: ['', '.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,
