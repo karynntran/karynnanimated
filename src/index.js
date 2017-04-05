@@ -74,7 +74,6 @@ class App extends Component {
 
 		let sections = 4,
 			containerHeight = document.getElementsByClassName('main-content-container')[0].clientHeight,
-			sectionHeight = containerHeight/sections,
 			section = document.querySelectorAll('section'),
 			maincontainer = document.getElementsByClassName('main-content-container')[0];
 
