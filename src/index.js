@@ -49,16 +49,16 @@ class App extends Component {
 	}
 
 	componentWillUnmount() {
-	    // mainWindow.removeEventListener('scroll', this.handleScroll);
+	    mainWindow.removeEventListener('scroll', this.handleScroll);
 	}
 
 	_setMainView(option, section){
 
-		let sections = document.querySelectorAll('section'),
-		maincontainer = document.getElementsByClassName('main-content-container')[0],
-		activeSectionOffset = sections[option].offsetTop;
+		let sectionsOne = document.querySelectorAll('section'),
+		maincontainerOne = document.getElementsByClassName('main-content-container')[0],
+		activeSectionOffsetOne = sectionsOne[option].offsetTop;
 
-		maincontainer.style.top = '-' + activeSectionOffset + 'px';
+		maincontainerOne.style.top = '-' + activeSectionOffsetOne + 'px';
 
 
 		// maincontainer.classList.remove('hello', 'work', 'portfolio', 'contact');
@@ -75,22 +75,22 @@ class App extends Component {
 	handleScroll(e){
 		let viewsTwo = [HelloView, WorkView, PortfolioView, ContactView]
 
-		let sections = 4,
-			containerHeight = document.getElementsByClassName('main-content-container')[0].clientHeight,
-			sectionHeight = containerHeight/sections,
-			section = document.querySelectorAll('section'),
-			maincontainer = document.getElementsByClassName('main-content-container')[0];
+		let sectionsTwo = 4,
+			containerHeightTwo = document.getElementsByClassName('main-content-container')[0].clientHeight,
+			sectionHeight = containerHeightTwo/sectionsTwo,
+			sectionTwo = document.querySelectorAll('section'),
+			maincontainerTwo = document.getElementsByClassName('main-content-container')[0];
 
 		
-			maincontainer.style.top = 0;
+			maincontainerTwo.style.top = 0;
 
 
 		if (this.state.loaded) {
-			let currentPos = Math.floor(((e.target.scrollTop / containerHeight + .1)) * sections);
-			let activeSection = section[currentPos];
+			let currentPos = Math.floor(((e.target.scrollTop / containerHeightTwo + .1)) * sectionsTwo);
+			let activeSection = sectionTwo[currentPos];
 
 			if (!(activeSection.className.indexOf('active') != -1)) {
-				[].forEach.call(section, function(sect) {
+				[].forEach.call(sectionTwo, function(sect) {
 				    sect.classList.remove("active");
 				});
 				activeSection.className += " active";
