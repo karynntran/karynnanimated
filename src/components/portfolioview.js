@@ -34,8 +34,7 @@ class PortfolioView extends Component {
 	}
 
 	render() {
-		const slider = document.getElementsByClassName('portfolio-ul')[0];
-		console.log(slider)
+
 		return (
 			<section className="content portfolio-content">
 				<div className="inner-content">

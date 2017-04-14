@@ -65,15 +65,15 @@ class App extends Component {
 		// maincontainer.classList.add(section);
 
 
-		let views = [HelloView, WorkView, PortfolioView, ContactView]
+		let viewsOne = [HelloView, WorkView, PortfolioView, ContactView]
 
 		this.setState({
-			currentView: views[option]
+			currentView: viewsOne[option]
 		})
 	};
 
 	handleScroll(e){
-		let views = [HelloView, WorkView, PortfolioView, ContactView]
+		let viewsTwo = [HelloView, WorkView, PortfolioView, ContactView]
 
 		let sections = 4,
 			containerHeight = document.getElementsByClassName('main-content-container')[0].clientHeight,
@@ -96,7 +96,7 @@ class App extends Component {
 				activeSection.className += " active";
 
 				this.setState({
-					currentView: views[currentPos]
+					currentView: viewsTwo[currentPos]
 				})
 			}
 
