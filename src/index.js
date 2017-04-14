@@ -12,6 +12,8 @@ import ContactView from './components/contactview';
 
 
 import MainView from './components/mainview';
+import Swipe from 'react-easy-swipe';
+
 
 
 // create a new component. this component should produce some html
@@ -33,6 +35,7 @@ class App extends Component {
 
 	}
 
+
 	componentDidMount(){
 		let mainWindow = document.getElementsByClassName('main-content')[0],
 			contentcontainer = document.getElementsByClassName('content-container')[0];
@@ -42,7 +45,7 @@ class App extends Component {
 
 		setTimeout(function(){
 			contentcontainer.classList.remove('animate');	
-		},200)
+		},500)
 	}
 
 	componentWillUnmount() {
@@ -74,6 +77,7 @@ class App extends Component {
 
 		let sections = 4,
 			containerHeight = document.getElementsByClassName('main-content-container')[0].clientHeight,
+			sectionHeight = containerHeight/sections,
 			section = document.querySelectorAll('section'),
 			maincontainer = document.getElementsByClassName('main-content-container')[0];
 

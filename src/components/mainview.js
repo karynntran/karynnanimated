@@ -13,6 +13,8 @@ class MainView extends Component {
 		super(props);
 
 		this.state = { currentView: this.props.currentView};
+
+		console.log(this.props)
 	}
 
 	render(){

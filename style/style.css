@@ -319,8 +319,8 @@ a, a:visited {
   width: 85%;
   height: auto;
   box-sizing: border-box;
-  overflow-x: scroll;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 .arrow {
   width: 2em;
