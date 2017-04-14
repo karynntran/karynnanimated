@@ -19,7 +19,7 @@ class MainView extends Component {
 
 	render(){
 		return (
-			<div className="main-view HelloView">
+			<div className={["main-view", this.state.currentView.name].join(" ")}>
 				<Nav setMainView={this.props.setMainView}/>
 				<div className="main-content">
 					<div className="main-content-container">
