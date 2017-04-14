@@ -49,7 +49,7 @@ class App extends Component {
 	}
 
 	componentWillUnmount() {
-	    mainWindow.removeEventListener('scroll', this.handleScroll);
+	    // mainWindow.removeEventListener('scroll', this.handleScroll);
 	}
 
 	_setMainView(option, section){
