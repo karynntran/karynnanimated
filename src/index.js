@@ -53,12 +53,13 @@ class App extends Component {
 	}
 
 	_setMainView(option, section){
+		console.log(option)
 
 		let sectionsOne = document.querySelectorAll('section'),
 		maincontainerOne = document.getElementsByClassName('main-content-container')[0],
 		activeSectionOffsetOne = sectionsOne[option].offsetTop;
 
-		maincontainerOne.style.top = '-' + activeSectionOffsetOne + 'px';
+		maincontainerOne.style.top = '-' + option + '00%';
 
 
 		// maincontainer.classList.remove('hello', 'work', 'portfolio', 'contact');
@@ -81,9 +82,7 @@ class App extends Component {
 			sectionTwo = document.querySelectorAll('section'),
 			maincontainerTwo = document.getElementsByClassName('main-content-container')[0];
 
-		
-			maincontainerTwo.style.top = 0;
-
+	
 
 		if (this.state.loaded) {
 			let currentPos = Math.floor(((e.target.scrollTop / containerHeightTwo + .1)) * sectionsTwo);
