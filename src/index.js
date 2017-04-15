@@ -94,6 +94,10 @@ class App extends Component {
 				});
 				activeSection.className += " active";
 
+				console.log(currentPos)
+
+				maincontainerTwo.style.top = '-' + currentPos + '00%';
+
 				this.setState({
 					currentView: viewsTwo[currentPos]
 				})
