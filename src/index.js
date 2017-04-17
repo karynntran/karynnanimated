@@ -41,11 +41,11 @@ class App extends Component {
 			contentcontainer = document.getElementsByClassName('content-container')[0];
 
 		mainWindow.addEventListener('scroll', this.handleScroll);
-		this.state.loaded = true;
 
 		setTimeout(function(){
 			contentcontainer.classList.remove('animate');	
 		},500)
+		this.state.loaded = true;
 	}
 
 	componentWillUnmount() {
@@ -53,11 +53,17 @@ class App extends Component {
 	}
 
 	_setMainView(option, section){
+
 		console.log(option)
 
 		let sectionsOne = document.querySelectorAll('section'),
+			 mainWindowOne = document.getElementsByClassName('main-content')[0],
+
 		maincontainerOne = document.getElementsByClassName('main-content-container')[0],
 		activeSectionOffsetOne = sectionsOne[option].offsetTop;
+
+
+		mainWindowOne.removeEventListener('scroll', this.handleScroll);
 
 		maincontainerOne.style.top = '-' + option + '00%';
 
@@ -71,6 +77,11 @@ class App extends Component {
 		this.setState({
 			currentView: viewsOne[option]
 		})
+
+		setTimeout(function(){
+			mainWindowOne.addEventListener('scroll', this.handleScroll);
+		},1500)
+
 	};
 
 	handleScroll(e){
@@ -82,7 +93,8 @@ class App extends Component {
 			sectionTwo = document.querySelectorAll('section'),
 			maincontainerTwo = document.getElementsByClassName('main-content-container')[0];
 
-	
+			maincontainerTwo.style.top = 'auto';
+
 
 		if (this.state.loaded) {
 			let currentPos = Math.floor(((e.target.scrollTop / containerHeightTwo + .1)) * sectionsTwo);
@@ -96,7 +108,7 @@ class App extends Component {
 
 				console.log(currentPos)
 
-				maincontainerTwo.style.top = '-' + currentPos + '00%';
+				// maincontainerTwo.style.top = '-' + currentPos + '00%';
 
 				this.setState({
 					currentView: viewsTwo[currentPos]

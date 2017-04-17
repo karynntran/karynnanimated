@@ -1,3 +1,9 @@
+@keyframes bounce {
+	0% { bottom: 0 };
+	50% { bottom: .5em };
+	100% { bottom: 0 };
+}
+
 .hello-content {
 	font-size: 1.5em;
 	font-weight: 400;
@@ -26,4 +32,29 @@
 	font-size: 1em;;
 }
 
+.scroll-container {
+	height: 5em;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+    bottom: 0;
+	animation: bounce .5s ease-in-out infinite;
+}
+.scroll {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: .5em auto;
+	text-align: center;
+	width: 100%;
+	font-size: .5em;
+}
+.down-arrow {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-top: 1em solid #fff;
+}
 

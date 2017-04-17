@@ -11,7 +11,7 @@ const WorkView = (props) => {
 						<div className="work-logo"></div>
 						<div className="work-details">
 							<div className="work-description">
-								<p className="work-title">Junior Ad Engineer</p>
+								<p className="work-title">Ad Engineer</p>
 								I work with designers, producers and content specialists to create custom, interactive creatives. Recent projects include experiments with CSS animations, 3D frameworks like Web-GL and Three.js and mobile native pressure touch functionality.
 							</div>
 						</div>
