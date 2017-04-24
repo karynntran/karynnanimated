@@ -23,12 +23,11 @@ class App extends Component {
 		super(props);
 
 		this.state = { 
+			loaded: false,
 			data: {},
 			currentView: HelloView,
 			title: 'karynn elio tran'
 		};
-
-		this.loaded = false;
 
 		this._setMainView = this._setMainView.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
@@ -38,7 +37,6 @@ class App extends Component {
 
 
 	componentDidMount(){
-		this.loaded = true;
 		let mainWindow = document.getElementsByClassName('main-content')[0],
 			contentcontainer = document.getElementsByClassName('content-container')[0];
 
@@ -47,6 +45,7 @@ class App extends Component {
 		setTimeout(function(){
 			contentcontainer.classList.remove('animate');	
 		},500)
+		this.state.loaded = true;
 	}
 
 	componentWillUnmount() {
@@ -120,20 +119,12 @@ class App extends Component {
 	}
 
 	render(){
-		if (this.loaded) {
-			return (
-				<div className="content-container animate">
-					<Hero title={this.state.title} />
-					<MainView currentView={this.state.currentView} setMainView={this._setMainView}/>
-				</div>
-			)
-		} else {
-			return (
-				<div>
-					Loading...
-				</div>
-			)	
-		}
+		return (
+			<div className="content-container animate">
+				<Hero title={this.state.title} />
+				<MainView currentView={this.state.currentView} setMainView={this._setMainView}/>
+			</div>
+		)
 	}
 }
 
