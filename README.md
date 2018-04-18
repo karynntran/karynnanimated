@@ -1,3 +1,15 @@
+## Run npm run dev
+## to start app and also sass watch
+
+
+
+
+
+
+
+
+
+
 # ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?

@@ -20,13 +20,9 @@ class MainView extends Component {
 	render(){
 		return (
 			<div className={["main-view", this.props.currentView.name].join(" ")}>
-				<Nav setMainView={this.props.setMainView}/>
 				<div className="main-content">
 					<div className="main-content-container">
 						<HelloView />
-						<WorkView />
-						<PortfolioView />
-						<ContactView />
 					</div>
 				</div>
 			</div>

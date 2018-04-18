@@ -1,60 +1,46 @@
-@keyframes bounce {
-	0% { bottom: 0 };
-	50% { bottom: .5em };
-	100% { bottom: 0 };
-}
-
 .hello-content {
 	font-size: 1.5em;
 	font-weight: 400;
-	font-family: 'Quicksand';
 	text-align: justify;
-	.inline {
-		font-size: 1.2em;
-		font-weight: 700;
-		font-family: 'Josefin Slab';
-		display: inline;
-		color: $navyBlue;
+	color: #000;
+}
+
+.col {
+	width: 50%;
+	height: 100%;
+	font-size: .75em;
+	float: left;
+	position: relative;
+}
+
+.text {
+	opacity: 0;
+}
+.show {
+	opacity: 1 !important;
+	transition: opacity .25s ease-in;
+}
+
+
+.example {
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	.square {
+		width: 45%;
+		height: 20%;
+		float: left;
+		margin: 2%;
+		background-color: gray;
 	}
 }
 
-.hello0 {
-	font-size: 1.2em;
-	margin-bottom: 1em;
-	font-family: 'Josefin Slab';
-
-}
-.hello1 {
-	font-size: 1em;
-}
-.hello2 {
-	margin-top: 1em;
-	font-size: 1em;;
+.example.25 {
+	display: block;
 }
 
-.scroll-container {
-	height: 5em;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-    bottom: 0;
-	animation: bounce .5s ease-in-out infinite;
-}
-.scroll {
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	margin: .5em auto;
-	text-align: center;
-	width: 100%;
-	font-size: .5em;
-}
-.down-arrow {
-    margin: 0 auto;
-    width: 0;
-    height: 0;
-    border-left: 1em solid transparent;
-    border-right: 1em solid transparent;
-    border-top: 1em solid #fff;
-}
 

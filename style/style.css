@@ -1,12 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
 ::-webkit-scrollbar {
   display: none; }
+
+* {
+  box-sizing: border-box; }
 
 body {
   margin: 0;
   padding: 0;
   position: absolute;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-family: 'Open Sans Condensed'; }
 
 ul {
   padding: 0;
@@ -17,525 +22,84 @@ li {
   list-style-type: none; }
 
 .container {
-  font-size: 12px;
+  font-size: 10px;
   width: 100%;
   height: 100%;
-  font-family: 'Quicksand';
   max-width: 100%;
   margin: 0;
   padding: 0;
-  /*	background: #e8edf3;*/ }
+  position: absolute;
+  top: 0;
+  left: 0; }
 
-/*HEADER*/
-.hero {
-  width: 40%;
-  height: 100%;
-  text-align: center;
-  font-family: 'Josefin Slab';
-  font-size: 3em;
-  line-height: 3em;
-  letter-spacing: 2px;
-  color: #b56969;
-  background: #F5F5F5;
-  float: left;
-  position: relative;
-  right: 0;
-  transition: right .75s ease-in-out; }
-
-.hero-text {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3vw;
-  color: darkgray; }
-
-.content-container {
+.content-container,
+.main-content-container,
+.inner-content {
   width: 100%;
-  height: 100%;
-  overflow: hidden; }
-  .content-container.animate .hero {
-    right: 100%; }
-  .content-container.animate .navigation {
-    left: 100%; }
-  .content-container.animate .main-content {
-    top: 100%; }
+  height: 100%; }
+
+section {
+  width: 100%;
+  height: 100%; }
 
 /*INTRO*/
 .main-view {
-  font-size: 1.2em;
-  width: 60%;
+  font-size: 2em;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
-  font-family: 'Open Sans';
   font-weight: 300;
   position: relative;
-  color: #fff;
-  float: left;
-  box-sizing: border-box;
-  background: #FF533D; }
-  .main-view:before {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    width: 8em;
-    height: 8em;
-    left: 0%;
-    top: 40%;
-    transform: translate(-50%);
-    z-index: 1; }
-  .main-view.HelloView {
-    background: #FF533D; }
-    .main-view.HelloView:before {
-      background: #fff url(../images/about.gif) no-repeat;
-      background-size: cover;
-      background-position: 100%;
-      border: 5px solid #FF533D;
-      transition: all .5s ease-in; }
-  .main-view.WorkView {
-    background: #0F1626; }
-    .main-view.WorkView:before {
-      background: #fff url(../images/work.gif) no-repeat;
-      background-size: cover;
-      background-position: 100%;
-      border: 5px solid #0F1626;
-      border-radius: 5px;
-      transition: all .5s ease-in; }
-  .main-view.PortfolioView {
-    background: #AB987A; }
-    .main-view.PortfolioView:before {
-      background: #fff url(../images/portfolio.gif) no-repeat;
-      background-size: contain;
-      background-position: top;
-      border: 5px solid #AB987A;
-      transition: all .5s ease-in; }
-  .main-view.ContactView {
-    background: #30415D; }
-    .main-view.ContactView:before {
-      background: #fff url(../images/contact.gif) no-repeat;
-      background-size: cover;
-      background-position: 100%;
-      border: 5px solid #30415D;
-      border-radius: 5px;
-      transition: all .5s ease-in; }
+  color: #fff; }
 
 .main-content {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  position: relative;
-  top: 0;
-  transition: top .75s 1s ease-in-out;
-  background: #FF533D; }
-
-.main-content-container {
-  width: 100%;
-  height: 400%;
-  position: absolute;
-  transition: top .75s ease-in-out; }
-
-.content {
-  clear: both;
-  width: 100%;
-  height: 25%;
-  margin: 0 auto;
-  position: relative; }
-  .content.hello-content {
-    background: #FF533D; }
-  .content.work-content {
-    background: #0F1626; }
-  .content.portfolio-content {
-    background: #AB987A; }
-  .content.contact-content {
-    background: #30415D; }
-
-.inner-content {
-  width: 65%;
-  height: auto;
-  position: relative;
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%); }
-
-@media all and (max-width: 1025px) {
-  .main-view {
-    font-size: 1.4vw;
-    width: 75%; }
-
-  .hero {
-    width: 25%; }
-
-  .hero-text {
-    width: 60%;
-    line-height: 1em;
-    font-size: 3vw;
-    text-align: left;
-    left: .5em; } }
-@media all and (max-width: 767px) {
-  body {
-    background: #F5F5F5; }
-
-  .main-view {
-    width: 100%;
-    height: 90%;
-    position: relative;
-    font-size: 2vw; }
-    .main-view:before {
-      left: 90%;
-      top: 0;
-      width: 5em;
-      height: 5em; }
-    .main-view.HelloView, .main-view.WorkView, .main-view.PortfolioView, .main-view.ContactView {
-      background: #F5F5F5; }
-
-  .hero {
-    width: 100%;
-    height: 10%;
-    position: relative; }
-
-  .hero-text {
-    font-size: 4vw; } }
-@media all and (max-width: 480px) {
-  body {
-    background: #F5F5F5; }
-
-  .hero-text {
-    font-size: 7vw; }
-
-  .main-view:before {
-    left: 50%;
-    width: 8em;
-    height: 8em; }
-
-  .inner-content {
-    width: 80%;
-    font-size: 1.4em; } }
-/*NAVIGATION*/
-.navigation {
-  position: relative;
-  height: 4%;
-  width: 100%;
-  float: left;
-  top: 0;
-  z-index: 1;
-  left: 0;
-  transition: left .75s .5s ease-in-out; }
-
-.navigation-categories {
-  margin: 0;
-  padding: 0;
-  width: 100%; }
-
-.category-container {
-  float: left;
-  list-style-type: none;
-  text-transform: uppercase;
-  font-size: .75em;
-  width: 25%;
-  height: 3em; }
-
-.category {
-  color: #fff;
-  text-align: center;
-  height: 100%;
-  font-size: 1.2em;
-  line-height: 2.4em; }
-
-.hello {
-  background: #FF533D; }
-
-.work {
-  background: #0F1626; }
-
-.portfolio {
-  background: #AB987A; }
-
-.contact {
-  background: #30415D; }
-
-@media all and (max-width: 767px) {
-  .navigation {
-    top: 95%; }
-
-  .category-container {
-    height: 6em; }
-
-  .category {
-    font-size: 2.2em; } }
-a, a:visited {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.email-ul {
-  width: 100%;
-  height: 10em; }
-
-.contact-li {
-  width: 25%;
-  height: 10em;
-  float: left;
-  margin: 0 1em;
-  cursor: pointer;
-  z-index: 4; }
-
-.contact-type {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: pointer; }
-
-.email {
-  background: url(../images/email.png) no-repeat;
-  background-size: 7vw;
-  background-position: center; }
-
-.github {
-  background: url(../images/github.png) no-repeat;
-  background-size: 7vw;
-  background-position: center; }
-
-.linkedin {
-  background: url(../images/linkedin.png) no-repeat;
-  background-size: 7vw;
-  background-position: center; }
-
-@media all and (max-width: 480px) {
-  .email {
-    background-size: 10vw !important; }
-
-  .github {
-    background-size: 10vw !important; }
-
-  .linkedin {
-    background-size: 10vw !important; } }
-.portfolio-slider {
-  width: 85%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  overflow: hidden; }
-
-.arrow {
-  width: 2em;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  z-index: 10; }
-
-.left-arrow {
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 1.2em solid transparent;
-  border-bottom: 1.2em solid transparent;
-  border-right: 1.2em solid #0F1626; }
-
-.right-arrow {
-  width: 0;
-  height: 0;
-  border-top: 1.2em solid transparent;
-  border-bottom: 1.2em solid transparent;
-  border-left: 1.2em solid #0F1626;
-  right: 0; }
-
-.portfolio-ul {
-  width: 500%;
-  height: 33em;
-  position: relative;
-  transition: left .5s ease-in-out;
-  left: 0; }
-
-.portfolio-li {
-  width: 20%;
-  height: 25em;
-  float: left;
-  position: relative;
-  box-sizing: border-box;
-  cursor: pointer; }
-  .portfolio-li a, .portfolio-li a:visited {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; }
-
-.portfolio-proj {
-  width: 80%;
-  height: 10em;
-  position: relative;
-  margin: 0 auto; }
-  .portfolio-proj .project-name {
-    text-align: center;
-    font-size: 1.75em;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    font-family: 'Josefin Slab';
-    margin-top: 1em;
-    padding: .2em;
-    border-bottom: 2px solid #fff; }
-  .portfolio-proj .project-client {
-    padding: .5em;
-    font-family: 'Quicksand';
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    text-align: center;
-    font-size: 1em;
-    letter-spacing: 1px; }
-  .portfolio-proj .project-img {
-    width: 100%;
-    height: 11em;
-    border: 1px solid #fff; }
-  .portfolio-proj .project-description {
-    margin: 1em auto;
-    font-weight: 700;
-    font-size: 1.1em; }
-  .portfolio-proj .project-notables {
-    font-style: italic;
-    text-align: justify;
-    font-size: 1em; }
-  .portfolio-proj.hennessy .project-img {
-    background: url(../images/portfolio-hennessy.png) no-repeat;
-    background-size: cover;
-    background-position: top; }
-  .portfolio-proj.cartier .project-img {
-    background: url(../images/portfolio-cartier.png) no-repeat;
-    background-size: cover;
-    background-position: top; }
-  .portfolio-proj.investools .project-img {
-    background: url(../images/portfolio-investools.png) no-repeat;
-    background-size: cover;
-    background-position: top; }
-  .portfolio-proj.kcs .project-img {
-    background: url(../images/portfolio-kcs.png) no-repeat;
-    background-size: cover;
-    background-position: top; }
-  .portfolio-proj.lolaskusina .project-img {
-    background: url(../images/portfolio-lolaskusina.png) no-repeat;
-    background-size: cover;
-    background-position: top; }
-  .portfolio-proj .project-details {
-    text-align: left;
-    padding: 1.5em; }
-
-@media all and (max-width: 480px) {
-  .portfolio-li {
-    height: 40em; } }
-.positions-li {
-  margin: 3em 0;
-  height: 6em; }
-  .positions-li.quartz .work-logo {
-    background: url(../images/logo-quartz.png) no-repeat;
-    background-size: 60%;
-    background-position: center; }
-  .positions-li.tda .work-logo {
-    background: url(../images/logo-tda.png) no-repeat;
-    background-size: 40%;
-    background-position: center; }
-  .positions-li.cspace .work-logo {
-    background: url(../images/logo-cspace.png) no-repeat;
-    background-size: 60%;
-    background-position: center; }
-  .positions-li.mediaplanet .work-logo {
-    background: url(../images/logo-mediaplanet.png) no-repeat;
-    background-size: 60%;
-    background-position: center; }
-
-.work-logo {
-  width: 30%;
-  height: 100%;
-  position: relative;
-  margin-bottom: .3em;
-  float: left; }
-
-.work-title {
-  margin: .25em 0;
-  padding: 0;
-  font-size: 1em;
-  text-transform: lowercase;
-  letter-spacing: 1px;
-  font-family: 'Josefin Slab'; }
-
-.work-details {
   width: 70%;
-  height: auto;
-  text-align: left;
-  float: left;
-  position: relative;
+  height: 70%;
+  padding: 3em;
+  position: absolute;
   top: 50%;
-  transform: translateY(-50%); }
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000; }
 
-@media all and (max-width: 480px) {
-  .positions-li {
-    margin: 5em 0; } }
-@keyframes bounce {
-  0% {
-    bottom: 0; }
-  50% {
-    bottom: 0.5em; }
-  100% {
-    bottom: 0; } }
 .hello-content {
   font-size: 1.5em;
   font-weight: 400;
-  font-family: 'Quicksand';
-  text-align: justify; }
-  .hello-content .inline {
-    font-size: 1.2em;
-    font-weight: 700;
-    font-family: 'Josefin Slab';
-    display: inline;
-    color: #0F1626; }
+  text-align: justify;
+  color: #000; }
 
-.hello0 {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-  font-family: 'Josefin Slab'; }
+.col {
+  width: 50%;
+  height: 100%;
+  font-size: .75em;
+  float: left;
+  position: relative; }
 
-.hello1 {
-  font-size: 1em; }
+.text {
+  opacity: 0; }
 
-.hello2 {
-  margin-top: 1em;
-  font-size: 1em; }
+.show {
+  opacity: 1 !important;
+  transition: opacity .25s ease-in; }
 
-.scroll-container {
-  height: 5em;
-  width: 100%;
+.example {
+  width: 80%;
+  height: 100%;
   position: absolute;
-  bottom: 0;
-  bottom: 0;
-  animation: bounce .5s ease-in-out infinite; }
-
-.scroll {
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: .5em auto;
-  text-align: center;
-  width: 100%;
-  font-size: .5em; }
-
-.down-arrow {
-  margin: 0 auto;
-  width: 0;
-  height: 0;
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  border-top: 1em solid #fff; }
-
-.intro-content {
-  width: 100%;
-  height: 10em;
-  position: relative;
   top: 50%;
-  transform: translateY(-50%);
-  text-align: center; }
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; }
+  .example .square {
+    width: 45%;
+    height: 20%;
+    float: left;
+    margin: 2%;
+    background-color: gray; }
 
-/*# sourceMappingURL=style.css.map */
+.example.25 {
+  display: block; }
+
+.slider {
+  height: 1em;
+  background: gray; }
