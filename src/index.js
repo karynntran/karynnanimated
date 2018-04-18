@@ -38,6 +38,8 @@ class App extends Component {
 	componentDidMount(){
 		let mainWindow = document.getElementsByClassName('main-content')[0],
 			contentcontainer = document.getElementsByClassName('content-container')[0];
+
+		document.getElementsByClassName('container')[0].classList += ' loaded'
 		this.state.loaded = true;
 	}
 

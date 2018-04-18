@@ -8,66 +8,67 @@ const HelloView = (props) => {
 		<section className="content hello-content">
 			<div className="inner-content">
 				<div className="col left-col">
-					<div className="hi1">Hi my name is Karynn.</div>	
-					<div className="hi2">I am a native New Yorker, a front end developer at Quartz with 6 years of additional experience in consumer insights, and an aspiring crafter.
-						<div className="text 25">I currently work at Quartz. </div>
-						<div className="text 50">Here is some of my code. </div>
-						<div className="text 75">These are a few of my projects. </div>
-						<div className="text 100">Here is my github, linkedin and instagram if you want to learn more. </div>
-					</div>
-					<ReactSlider withBars onAfterChange={test}>
-					    <div className="my-handle">X</div>
-					  </ReactSlider>
+					<div className="intro">
+						<div className="hello hello1">Hi, my name is Karynn.</div>
+						<div className="hello hello2">I am a native New Yorker, a front end developer, and have six years of additional experience in consumer insights.</div>
+					</div>	
+						<div className="text" id="text-two">I currently work at <span className="robinsegg-highlight">Quartz</span>, but I used to work at <span className="robinsegg-highlight">TD Ameritrade, </span><span className="robinsegg-highlight">CSpace, </span>and <span className="robinsegg-highlight">MediaPlanet</span>. </div>
+						<div className="text" id="text-three"><span className="robinsegg-highlight">Here</span> is some of my code. </div>
+						<div className="text" id="text-four">These are a <span className="robinsegg-highlight">few creative pursuits</span> I explore in my spare time. </div>
+						<div className="text" id="text-five">Here is my <span className="robinsegg-highlight">github, linkedin</span> and <span className="robinsegg-highlight">instagram</span> if you want to learn more. </div>
 				</div>
 				<div className="col right-col">
-					<div className="example 0">
+					<div className="example" id="example-one">
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 					</div>
-					<div className="example 25">
+					<div className="example" id="example-two">
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 					</div>
-					<div className="example 50">
+					<div className="example" id="example-three">
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 					</div>
-					<div className="example 75">
+					<div className="example" id="example-four">
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 					</div>
-					<div className="example 100">
+					<div className="example" id="example-five">
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 					</div>
 				</div>
+				<ReactSlider withBars onChange={getValue}>
+				    <div className="my-handle">X</div>
+				  </ReactSlider>
 			</div>
 		</section>
 	); 
 
-	function test() {
+	function getValue() {
 		let value = document.getElementsByClassName('handle')[0].getAttribute('aria-valuenow');
-		if (value >= 25 ) {
-			document.getElementsByClassName('25')[0].classList += ' show';
+		if (value <= 25 ) {
+			document.getElementsByClassName('inner-content')[0].classList += ' two';
 		}
-		if (value >= 50 ) {
-			document.getElementsByClassName('50')[0].classList += ' show';
+		if (value > 25 && value <= 50 ) {
+			document.getElementsByClassName('inner-content')[0].classList += ' three';
 		}
-		if (value >= 75 ) {
-			document.getElementsByClassName('75')[0].classList += ' show';
+		if (value > 50 && value <= 75 ) {
+			document.getElementsByClassName('inner-content')[0].classList += ' four';
 		}
-		if (value == 100 ) {
-			document.getElementsByClassName('100')[0].classList += ' show';
+		if (value > 75 && value <= 100 ) {
+			document.getElementsByClassName('inner-content')[0].classList += ' five';
 		}
 	}
 };

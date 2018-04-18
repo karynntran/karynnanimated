@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Glass+Antiqua');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400');
+
+$robinsEgg: #84ADAC;
+$grayPurple: #696A88;
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-family: 'Poppins';
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.container {
+	font-size: 10px;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	.content-container,
+	.main-content-container,
+	.inner-content {
+		width: 100%;
+		height: 100%;
+	}
+
+	section {
+		width: 100%;
+		height: 100%;
+	}
+
+	/*INTRO*/
+	.main-view {
+		font-size: 2em;
+		width: 75%;
+		height: 75%;
+		margin: 0 auto;
+		font-weight: 300;
+	    color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		&:after {
+			content: '2018';
+			position: absolute;
+			right: 0;
+			color: #000;
+			font-size: .5em;
+		}
+	}
+
+	.main-content {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 3em;
+		border: 1px solid $robinsEgg;
+	}
+}
+
+
+	
+
+
+
+
+
+
+
+
+// @import '_navigation.scss';
+// @import '_contact.scss';
+// @import '_portfolio.scss';
+
+// @import '_work.scss';
+
+@import '_hello.scss';
+@import 'slider.scss';
+
+// @import '_intro.scss';

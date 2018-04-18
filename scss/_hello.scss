@@ -1,0 +1,141 @@
+
+
+.container {
+  div {
+    margin-bottom: .4em;
+  }
+  .hello-content {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: justify;
+    color: #000;
+  }
+
+  .col {
+    width: 50%;
+    height: 90%;
+    font-size: .75em;
+    float: left;
+    position: relative;
+  }
+
+  .hello1,
+  .hello2 {
+    opacity: 0;
+  }
+
+  .hello1 {
+    font-family: 'Poiret One';
+    font-size: 2em;
+    color: $grayPurple;
+    font-weight: bold;
+  }
+  .hello2 {
+    font-weight: 300;
+  }
+
+  .inner-content {
+    .text {
+      opacity: 0; 
+      .robinsegg-highlight {
+        color: $robinsEgg;
+        text-transform: uppercase;     
+      }
+    }
+    .example {
+      display: none;
+    }
+    &.two {
+      #text-two {
+        opacity: 1 !important;
+        transition: opacity .25s ease-in;
+      }
+      #example-two {
+        display: block;
+      }
+    }
+    &.three {
+      #text-three {
+        opacity: 1 !important;
+        transition: opacity .25s ease-in;
+      }
+      #example-three {
+        display: block;
+      }
+    }
+    &.four {
+      #text-four {
+        opacity: 1 !important;
+        transition: opacity .25s ease-in;
+      }
+      #example-four {
+        display: block;
+      }
+    }
+    &.five {
+      #text-five {
+        opacity: 1 !important;
+        transition: opacity .25s ease-in;
+      }
+      #example-five {
+        display: block;
+      }
+    }
+  }
+
+
+  .example {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .square {
+      width: 45%;
+      height: 20%;
+      float: left;
+      margin: 2%;
+      background-color: gray;
+    }
+    &#example-one {
+      .square {
+        background-color: #505050;    
+      }
+    }
+    &#example-two {
+      .square {
+        background-color: #505050;    
+      }
+    }
+    &#example-three {
+      .square {
+        background-color: #303030;
+      }
+    }
+    &#example-four {
+      .square {
+        background-color: #B8B8B8;
+      }
+    }
+    &#example-five {
+      .square {
+        background-color: #F5F5F5;
+      }
+    }
+  }
+  &.loaded {
+    .hello1 {
+      opacity: 1;
+      transition: opacity .25s .25s ease-in;
+    }
+    .hello2 {
+      opacity: 1;
+      transition: opacity .25s .5s ease-in;
+    }
+  }
+}
+
+
+
+
