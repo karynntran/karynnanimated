@@ -1,9 +1,6 @@
 
 
 .container {
-  div {
-    margin-bottom: .4em;
-  }
   .hello-content {
     font-size: 1em;
     font-weight: 400;
@@ -19,9 +16,18 @@
     position: relative;
   }
 
+  .intro {
+    border-bottom: .15em solid $grayPurple;
+    padding: .2em 0 .2em 0;
+    margin-bottom: 1em;
+  }
+
   .hello1,
   .hello2 {
     opacity: 0;
+      .purple-highlight {
+        color: $grayPurple;
+      }
   }
 
   .hello1 {
@@ -32,11 +38,13 @@
   }
   .hello2 {
     font-weight: 300;
+    margin: .5em 0 .5em 0;
   }
 
   .inner-content {
     .text {
-      opacity: 0; 
+      opacity: 0;
+      margin-bottom: 1.3em;
       .robinsegg-highlight {
         color: $robinsEgg;
         text-transform: uppercase;     
@@ -45,6 +53,7 @@
     .example {
       display: none;
     }
+
     &.two {
       #text-two {
         opacity: 1 !important;
@@ -81,49 +90,148 @@
         display: block;
       }
     }
+    .example {
+      width: 80%;
+      height: 90%;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background: #fff;
+      .square {
+        justify-content: space-around;
+        background-color: gray;
+        height: 50%;
+        float: left;
+        border: .2em solid #fff;
+      }
+      &#example-one {
+        display: block;
+        .square {
+          width: 100%;
+          height: 100%;
+          background-color: #505050;  
+          border: none;  
+        }
+      }
+      &#example-two {
+        .square {
+          &:nth-of-type(1) {
+            width: 100%;
+            background-color: #505050;
+            flex: 2;
+            background-image: url('../images/logo-quartz.png');
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: 50%;         
+          }
+          &:nth-of-type(2) {
+            width: 33.3%;
+            background-color: $robinsEgg;   
+            flex: 2; ;
+            background-image: url('../images/logo-tda.png');
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: 50%;        
+          }
+          &:nth-of-type(3) {
+            width: 33.3%;
+            background-color: $grayPurple;
+            flex: 2;
+            background-image: url('../images/logo-cspace.png');
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: 50%;          
+          }
+          &:nth-of-type(4) {
+            width: 33.3%;
+            background-color: gray;
+            flex: 2;;
+            background-image: url('../images/logo-mediaplanet.png');
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: 50%;            
+          }
+        }
+      }
+      &#example-three {
+        .square {
+          &:nth-of-type(1) {
+            width: 60%;
+            background-color: #505050;
+            flex: 2;
+            background-image: url('../images/portfolio-cartier.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;         
+          }
+          &:nth-of-type(2) {
+            width: 40%;
+            background-color: $robinsEgg;   
+            flex: 2; ;
+            background-image: url('../images/portfolio-hennessy.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;        
+          }
+          &:nth-of-type(3) {
+            width: 45%;
+            background-color: $grayPurple;
+            flex: 2;
+            background-image: url('../images/portfolio-kcs.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;          
+          }
+          &:nth-of-type(4) {
+            width: 55%;
+            background-color: gray;
+            flex: 2;;
+            background-image: url('../images/portfolio-lolaskusina.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;            
+          }
+        }
+      }
+      &#example-four {
+        .square {
+          background-color: #B8B8B8;
+        }
+      }
+      &#example-five {
+        .square {
+          padding: 2em;
+          &:nth-of-type(1) {
+            width: 100%;
+            height: 25%;
+            background-color: #505050;
+            color: #fff;
+          }
+          &:nth-of-type(2) {
+            width: 100%;
+            height: 25%;
+            background-color: $robinsEgg;
+            color: #fff;
+          }
+          &:nth-of-type(3) {
+            width: 100%;
+            height: 25%;
+            background-color: $grayPurple;
+            color: #fff;    
+          }
+          &:nth-of-type(4) {
+            width: 100%;
+            height: 25%;
+            background-color: gray;
+            color: #fff;  
+          }
+        }
+      }
+    }
   }
 
 
-  .example {
-    width: 80%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    .square {
-      width: 45%;
-      height: 20%;
-      float: left;
-      margin: 2%;
-      background-color: gray;
-    }
-    &#example-one {
-      .square {
-        background-color: #505050;    
-      }
-    }
-    &#example-two {
-      .square {
-        background-color: #505050;    
-      }
-    }
-    &#example-three {
-      .square {
-        background-color: #303030;
-      }
-    }
-    &#example-four {
-      .square {
-        background-color: #B8B8B8;
-      }
-    }
-    &#example-five {
-      .square {
-        background-color: #F5F5F5;
-      }
-    }
-  }
   &.loaded {
     .hello1 {
       opacity: 1;
@@ -132,6 +240,16 @@
     .hello2 {
       opacity: 1;
       transition: opacity .25s .5s ease-in;
+    }
+    .example {
+      &#example-one {
+        .square {
+          background-image: url('../images/italy.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50%;
+        }
+      }
     }
   }
 }

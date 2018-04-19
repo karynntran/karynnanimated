@@ -1,5 +1,27 @@
 .slider {
 	height: 1em;
-	background: $robinsEgg;
+	background: linear-gradient(to right, $robinsEgg, $grayPurple);
 	clear: both;
+	top: 1em;
+}
+
+.slider-labels {
+	width: 100%;
+}
+.label {
+	font-size: 1em;
+	color: #fff;
+	font-family: 'Poiret One';
+	width: calc(100% / 4);
+	float: left;
+	position: relative;
+	text-align: right;
+	line-height: 1em;
+}
+.sub-handle {
+	width: 1em;
+	height: 1em;
+	background-color: #fff;
+	border-radius: 50%;
+	border: .2em solid $orange;
 }
