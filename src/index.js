@@ -54,6 +54,7 @@ class App extends Component {
 		let sectionsOne = document.querySelectorAll('section'),
 			mainWindowOne = document.getElementsByClassName('main-content')[0],
 			maincontainerOne = document.getElementsByClassName('main-content-container')[0];
+;
 
 
 

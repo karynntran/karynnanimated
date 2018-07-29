@@ -3,6 +3,14 @@
 	background: linear-gradient(to right, $robinsEgg, $grayPurple);
 	clear: both;
 	top: 1em;
+	&:after {
+	    content: 'slide to navigate';
+	    position: absolute;
+	    color: #ccc;
+	    bottom: -110%;
+	    font-size: .6em;
+	    left: 0;
+	}
 }
 
 .slider-labels {
@@ -24,4 +32,9 @@
 	background-color: #fff;
 	border-radius: 50%;
 	border: .2em solid $orange;
+	&.chosen {
+	    width: 2em;
+	    background-color: #EDA108;
+	    border-radius: 0;
+	}
 }

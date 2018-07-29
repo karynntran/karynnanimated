@@ -40,10 +40,10 @@ const HelloView = (props) => {
 						<div className="square"></div>
 					</div>
 					<div className="example" id="example-five">
-						<div className="square">github</div>
-						<div className="square">linkedin</div>
-						<div className="square">instagram</div>
-						<div className="square">email</div>
+						<div className="square"><a href="https://github.com/karynntran/" target="_blank">github</a></div>
+						<div className="square"><a href="https://www.linkedin.com/in/karynneliotran" target="_blank">linkedin</a></div>
+						<div className="square"><a href="https://www.instagram.com/thereyouarekar/" target="_blank">instagram</a></div>
+						<div className="square"><a href="mailto:karynn.tran@email.com?Subject=hey there,%20kar">email</a></div>
 					</div>
 				</div>
 				<ReactSlider withBars onChange={getValue}>
@@ -62,22 +62,29 @@ const HelloView = (props) => {
 	); 
 
 	function getValue() {
-		let value = document.getElementsByClassName('handle')[0].getAttribute('aria-valuenow');
+		let value = document.getElementsByClassName('handle')[0].getAttribute('aria-valuenow'),
+			subhandle = document.getElementsByClassName('sub-handle')[0];
+
 		if (value <= 5 ) {
 			document.getElementsByClassName('inner-content')[0].classList = 'inner-content';
 		}
-		if (value > 5 && value <= 25 ) {
-			document.getElementsByClassName('inner-content')[0].classList = 'inner-content one two';
+		if (value > 5 && value < 25 ) {
+			document.getElementsByClassName('inner-content')[0].classList = 'inner-content work';
 		}
-		if (value > 25 && value <= 50 ) {
-			document.getElementsByClassName('inner-content')[0].classList = 'inner-content one two three';
+		if (value > 25 && value < 50 ) {
+			document.getElementsByClassName('inner-content')[0].classList = 'inner-content portfolio';
 		}
-		if (value > 50 && value <= 75 ) {
-			document.getElementsByClassName('inner-content')[0].classList = 'inner-content one two three four';
+		if (value > 50 && value < 75 ) {
+			document.getElementsByClassName('inner-content')[0].classList = 'inner-content creative';
 		}
-		if (value > 75 && value <= 100 ) {
-			document.getElementsByClassName('inner-content')[0].classList = 'inner-content one two three four five';
+		if (value > 75 && value < 100 ) {
+			document.getElementsByClassName('inner-content')[0].classList = 'inner-content contact';
 		}
+		// if (value == 25 || value == 50 || value == 75 || value == 100){
+		// 	subhandle.classList = "sub-handle chosen";
+		// } else {
+		// 	subhandle.classList = "sub-handle";
+		// }
 	}
 };
 
