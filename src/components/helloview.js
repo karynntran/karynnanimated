@@ -5,6 +5,7 @@ import ReactSlider from 'react-slider';
 const HelloView = (props) => {
 
 	return (
+
 		<section className="content hello-content">
 			<div className="inner-content">
 				<div className="col left-col">
@@ -22,18 +23,21 @@ const HelloView = (props) => {
 						<div className="square"></div>
 					</div>
 					<div className="example" id="example-two">
-						<div className="square"></div>
-						<div className="square"></div>
-						<div className="square"></div>
-						<div className="square"></div>
+						<div className="square"><a href="https://www.qz.com" target="_blank"></a></div>
+						<div className="square"><a href="https://www.tdameritrade.com/education.page" target="_blank"></a></div>
+						<div className="square"><a href="https://cspace.com/" target="_blank"></a></div>
+						<div className="square"><a href="https://www.mediaplanet.com/us/" target="_blank"></a></div>
 					</div>
 					<div className="example" id="example-three">
-						<div className="square"></div>
-						<div className="square"></div>
-						<div className="square"></div>
-						<div className="square"></div>
+						<div className="square"><a href="https://qz.com/788690/interactive-beauty-through-creation/" target="_blank"></a></div>
+						<div className="square"><a href="https://qz.com/828163/what-drives-success-a/" target="_blank"></a></div>
+						<div className="square"><a href="https://kcsrestaurantsupply.herokuapp.com/" target="_blank"></a></div>
+						<div className="square"><a href="https://lolaskusina.herokuapp.com/" target="_blank"></a></div>
+						<div className="square"><a href="https://www.investools.com/" target="_blank"></a></div>
 					</div>
 					<div className="example" id="example-four">
+						<div className="square"></div>
+						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
 						<div className="square"></div>
@@ -49,7 +53,7 @@ const HelloView = (props) => {
 				<ReactSlider withBars onChange={getValue}>
 					<div className="sub-handle"></div>
 				</ReactSlider>
-				<div classNames="slider-labels">
+				<div className="slider-labels">
 					<div className="label"></div>
 					<div className="label">work</div>
 					<div className="label">portfolio</div>
@@ -60,6 +64,9 @@ const HelloView = (props) => {
 			</div>
 		</section>
 	); 
+
+	function selectLabel(category) {
+	}
 
 	function getValue() {
 		let value = document.getElementsByClassName('handle')[0].getAttribute('aria-valuenow'),
@@ -80,11 +87,6 @@ const HelloView = (props) => {
 		if (value > 75 && value < 100 ) {
 			document.getElementsByClassName('inner-content')[0].classList = 'inner-content contact';
 		}
-		// if (value == 25 || value == 50 || value == 75 || value == 100){
-		// 	subhandle.classList = "sub-handle chosen";
-		// } else {
-		// 	subhandle.classList = "sub-handle";
-		// }
 	}
 };
 
