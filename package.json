@@ -13,6 +13,7 @@
     "build-task:autoprefixer": "postcss css/*.css --use autoprefixer -d css",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'scss/**/*.scss' -c 'npm run sass:build'",
+    "prod": "NODE_ENV=production node server.js",
     "start": "node server.js"
   },
   "author": "",
