@@ -20,12 +20,15 @@
 	font-size: 1em;
 	color: #fff;
 	font-family: 'Poiret One';
-	width: calc(100% / 4);
+	width: calc((100% / 4) - 1em);
 	float: left;
 	position: relative;
 	text-align: center;
 	line-height: 1em;
 	pointer-events: none;
+	&:nth-child(1) {
+		width: 1em;
+	}
 }
 .sub-handle {
 	width: 1em;
@@ -39,3 +42,14 @@
 	    border-radius: 0;
 	}
 }
+
+@media all and (max-width: 480px) {
+	.label {
+		font-size: .75em;
+		line-height: 1.7em;
+		letter-spacing: .1em !important;
+		text-align: center;
+		width: calc((100% / 4) - .3em);
+	}
+}
+

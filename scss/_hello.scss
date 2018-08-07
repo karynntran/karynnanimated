@@ -4,7 +4,7 @@
   .hello-content {
     font-size: 1em;
     font-weight: 400;
-    text-align: justify;
+    // text-align: justify;
     color: #000;
   }
 
@@ -14,6 +14,9 @@
     font-size: .75em;
     float: left;
     position: relative;
+    &.left-col {
+      overflow: scroll;
+    }
   }
 
   .intro {
@@ -356,5 +359,103 @@
 }
 
 
+@media all and (max-width: 1120px) {
+  .container {
+    .main-view {
+      width: 90%;
+      height: 90%;
+    }
+    .main-content {
+      padding: 2em;
+    }
+    .col {
+      &.left-col {
+        font-size: .65em;
+      }
+    }
+    .inner-content {
+      .example {
+        border: none;
+        &#example-two {
+          .square {
+            width: calc(100% / 2) !important;
+            height: calc(100% / 2) !important;
+          }
+        }
+        &#example-three {
+          .square {
+            width: calc(100% / 2) !important;
+            height: calc(100% / 3) !important;
+          }          
+        }
+        &#example-four {
+          .square {
+            width: calc(100% / 2) !important;
+            height: calc(100% / 3) !important;
+          }           
+        }
+      }
+    }
+  }  
+}
 
+@media all and (max-width: 480px) {
+    .container {
+      .main-content {
+        padding: 1em;
+      }
+      .inner-content {
+        .example {
+          width: 100%;
+          .square {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .text {
+          display: none;
+        }
+        &.work,
+        &.portfolio,
+        &.creative,
+        &.contact {
+          .example .square {
+            width: 2em;
+            height: 2em;
+          }
+        }
+        &.work {
+          #text-two {
+            display: block;
+          }
+        }
+        &.portfolio {
+          #text-three {
+            display: block;
+          }          
+        }
+        &.creative {
+          #text-four {
+            display: block;
+          }          
+        }
+        &.contact {
+          #text-five {
+            display: block;
+          }
+        }
+      }
+      .col {
+        width: 100%;
+        &.left-col {
+          height: 35%;
+          width: 100%;        
+        }
+        &.right-col {
+          height: 55%;
+          width: 100%;
+        }
+      }
+    }
+}
 

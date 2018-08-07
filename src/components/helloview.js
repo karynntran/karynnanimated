@@ -54,7 +54,7 @@ const HelloView = (props) => {
 					<div className="sub-handle"></div>
 				</ReactSlider>
 				<div className="slider-labels">
-					<div className="label"></div>
+					<div className="label">&#9672;</div>
 					<div className="label">work</div>
 					<div className="label">portfolio</div>
 					<div className="label">creative</div>
