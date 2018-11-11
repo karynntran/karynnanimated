@@ -29,9 +29,10 @@ const HelloView = (props) => {
 						<div className="square"><a href="https://www.mediaplanet.com/us/" target="_blank"></a></div>
 					</div>
 					<div className="example" id="example-three">
+						<div className="square"><a href="https://www.bofaml.com/en-us/content/smart-cities/the-smart-city-opportunity.html" target="_blank"></a></div>
+						<div className="square"><a href="https://qz.com/1074435/do-you-recognize-this-hackers-phishing-attempt/" target="_blank"></a></div>
 						<div className="square"><a href="https://qz.com/788690/interactive-beauty-through-creation/" target="_blank"></a></div>
 						<div className="square"><a href="https://qz.com/828163/what-drives-success-a/" target="_blank"></a></div>
-						<div className="square"><a href="https://kcsrestaurantsupply.herokuapp.com/" target="_blank"></a></div>
 						<div className="square"><a href="https://lolaskusina.herokuapp.com/" target="_blank"></a></div>
 						<div className="square"><a href="https://www.investools.com/" target="_blank"></a></div>
 					</div>

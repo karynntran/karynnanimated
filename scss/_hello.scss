@@ -193,19 +193,19 @@
       &#example-three {
         .square {
           &:nth-of-type(1) {
-            width: 60%;
+            width: 33%;
             background-color: #505050;
-            flex: 2;
-            background-image: url('../images/portfolio-cartier.png');
+            flex: 3;
+            background-image: url('../images/portfolio-bofa.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50%;         
           }
           &:nth-of-type(2) {
-            width: 40%;
+            width: 33%;
             background-color: $robinsEgg;   
-            flex: 2; ;
-            background-image: url('../images/portfolio-hennessy.png');
+            flex: 3;
+            background-image: url('../images/portfolio-att.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50%;        
@@ -214,7 +214,7 @@
             width: 33%;
             background-color: $grayPurple;
             flex: 3;
-            background-image: url('../images/portfolio-kcs.png');
+            background-image: url('../images/portfolio-cartier.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50%;          
@@ -223,7 +223,7 @@
             width: 33%;
             background-color: gray;
             flex: 3;
-            background-image: url('../images/portfolio-lolaskusina.png');
+            background-image: url('../images/portfolio-hennessy.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50%;            
@@ -231,7 +231,16 @@
           &:nth-of-type(5) {
             width: 33%;
             background-color: gray;
-            flex: 3;;
+            flex: 3;
+            background-image: url('../images/portfolio-lolaskusina.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;            
+          }
+          &:nth-of-type(6) {
+            width: 33%;
+            background-color: gray;
+            flex: 3;
             background-image: url('../images/portfolio-investools.png');
             background-repeat: no-repeat;
             background-size: cover;
